@@ -51,8 +51,19 @@ There are many types of NOSQLs
 2. Calculate the rows and estimated number of rows for a specified period of time.
 
 ### Storing large text data in the database
-nvarachar(max)  can be used.
-Text, nText are getting deprecated.
+
+Consider the use case where we have to store the large text data in the database. For Examples, a Q& A website like Quora storing answers, Blog posts in wordpress etc.
+
+Relational Database provide special fields for these type of requirements-
+
+In SQLServer,we have nvarchar(n) and  nvarchar(max) fields which  can store up to 2 GB of unicode text data.
+Similarly, in MYSQL, we have the four TEXT types as TINYTEXT, TEXT, MEDIUMTEXT, and LONGTEXT. Here, maximum bytes (4GB) can be stored in LONGTEXT.
+
+Things to consider here-
+1. Do you wish to do a full text search on the text stored? If yes, you can think of using a full text search solution like Lucene. Elastic search etc.  
+
+
+
 
 ### How to store images and videos in database?
 BLOB field can be used to store images in binary form.
