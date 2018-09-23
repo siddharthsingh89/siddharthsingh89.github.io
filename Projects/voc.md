@@ -9,12 +9,12 @@ permalink: /projects/voc
 The goal of this project was bring the voice of our Customers to various Product Teams at Adobe. Lots of data related to customer interaction resided on multiple systems and diverse data sources. This project involved creating stable data piplelines and unifying all the data sources into a single dashboard. This was an internal project and target users were the product managers , Engineering managers and other engineers who wanted to see how the customers are inteacting  with the applications.
 
 #### Challenges : Diverse data sources 
-•	Data from Adobe Customer forums(powered by Jive) exposed as REST apis.
-•	FaceBook data- Facebook graph apis to fetch data
-•	Twitter data- Graph apis
-•	Adobe Internal User inteactioin Logging System data-  JDBC-Cloudera driver – HiveServer2 
-•	Data from Amazon Warehouse services 
-•	Playstores data- Respective Google and Apple playstore apis
+â€¢	Data from Adobe Customer forums(powered by Jive) exposed as REST apis.
+â€¢	FaceBook data- Facebook graph apis to fetch data
+â€¢	Twitter data- Graph apis
+â€¢	Adobe Internal User inteactioin Logging System data-  JDBC-Cloudera driver â€“ HiveServer2 
+â€¢	Data from Amazon Warehouse services 
+â€¢	Playstores data- Respective Google and Apple playstore apis
 
 #### Technologies 
 PHP, angular js, html,MySQL, C# , SQL
