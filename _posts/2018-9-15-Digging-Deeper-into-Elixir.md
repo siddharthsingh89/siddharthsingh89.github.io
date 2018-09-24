@@ -47,6 +47,8 @@ end
 ```
 The Elixir code is kept in .ex or .exs files. This code is compiled into bytecode by the Elixir compiler.
 
+![Elixir Compilation]({{ site.baseurl }}/images/elixir1.jpg "Elixir Compilation")
+
 #### Compiling the module
 Open the command prompt and go to the directory where you have saved the Calculator.ex file and Compile using below command-
 
