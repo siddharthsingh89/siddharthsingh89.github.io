@@ -1,5 +1,4 @@
 ### Should I learn Elixir ? Why not!
-
 Elixir, the buzz among the Functional Programming Languages ? Is it safe to bet on Elixir and it frameworks ? I heard a many good things about Elixir from one of my friends who are using the Phoenix framwork in Production and thouught to check it out.
 
 The objective of this post is have a look at Elixir and its various interesting features- to determine if it is good candidate to learn for modern web applications. Elixir is a new programming language. Although it appeared first in 2011, It has started getting some traction recently.
