@@ -1,4 +1,4 @@
-### Erlang VM: The Power behind Elixir
+#### Erlang VM: The Power behind Elixir
 Erlang VM is powerful machine and has proved it metal successfully for many decades.  As it was developed in Ericsson with the intent of solving the problems of the Telecom Industry and this domain has been the  major user of this Beast and rightly so, as it  has been designed to support massively scalable and concurrent applications.
 
 BEAM (Björn’s Abstract Machine) is the machine that executes the code in the Erlang Run time System. The code which we write as part of our application in Elixir or Erlang is executed by BEAM.
