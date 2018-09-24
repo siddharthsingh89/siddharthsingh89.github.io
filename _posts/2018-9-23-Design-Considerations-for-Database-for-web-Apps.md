@@ -66,8 +66,12 @@ Things to consider here-
 
 
 ### How to store images and videos in database?
-BLOB field can be used to store images in binary form.
-However, it is prefereed to store the acutal image files in the File system and store the path of the file in the database.
+Consider the scenario if we have to store the images in an application.
+Example- Profile pictures, Answers having pictures in Q&A etc., Files uploaded by users etc.
 
-### File System vs the database for storing images
+If we store the images in the BLOB field of the database, it impacts the performance of queries. While replication is easy, 
+
+We can instead use the file system to store the images or files and store the path of the file in the database. Storing large files in DB slows it down so if your files are bigger, File system is your best bet.
+
+However, In a file system, we loose the ACID properties offered by a database. Files can be manually moved, deleted as well and we wouldn't know if the file exists.
 
