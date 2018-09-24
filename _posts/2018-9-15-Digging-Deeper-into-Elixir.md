@@ -28,7 +28,8 @@ While it may not be as fast as C++ when it comes to processing images or numbers
 ### Let's write a simple module in Elixir.
 Create a file named Calculator.ex and copy the below code.
 
-```defmodule Calculator do
+```
+defmodule Calculator do
   def add(a, b) do
     a + b
   end  
@@ -41,7 +42,8 @@ Create a file named Calculator.ex and copy the below code.
   def divide(a, b) do
 	a/b
   end  
-end```
+end
+```
 The Elixir code is kept in .ex or .exs files. This code is compiled into bytecode by the Elixir compiler.
 
 ![Elixir Compilation]({{ site.baseurl }}/images/elixir1.jpg "Elixir Compilation")
