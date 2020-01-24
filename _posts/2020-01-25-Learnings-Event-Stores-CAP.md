@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Learning of the day : Stream processing, Limitations of CAP theorem
+title: Learn more about Stream processing and limitaions of CAP theorem
 ---
+
 
 ### Stream Processing in Modern distributed systems
 Today I was  searching for an reference implementation of distributed transactions in a microservices architecture and came across few Kafka based solutions. These solutions involved utilizing SAGA pattern using Kafka as the messaging layer.
