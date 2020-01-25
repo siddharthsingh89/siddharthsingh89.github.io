@@ -47,19 +47,20 @@ Hello, I am your favourite user Service. I live in WhatsApp\FB data center. I st
   3. I can use relational database but it's best for me to use Read-optimized hight available key-value store for storing user information.
   4. Let's say I use Amazon Dynamo for storing it. I also interact with a Redis Cache before hitting the database.
   5. What I store is something like-
-  ```
+  ```json
     { 
       "id:"121212121212", 
-      "name: " Sidharth Singh",
-      "status" : "sleeping :-)" , 
-       "settings" : { "account_setting": {},
+      "name: "Sidharth Singh",
+      "status" : "sleeping :-)", 
+       "settings" : { 
+                      "account_setting": {},
                       "device_setting: {}
                      },
-       "groups" : { "group_id": "2233232",
+       "groups" : { 
+                    "group_id": "2233232",
                     "group_name" "School Friends"
-                   }
-   };
-   
+                  }
+    }
 ```
    
 #### Messaging Service
@@ -75,17 +76,18 @@ Hello, I am your favourite user Service. I live in WhatsApp\FB data center. I st
   6. The process have information about the users connections and proceses from a data store described below.
   7. Messaging Sub system also maintains mapping between PID and UserID in a read-optimized cache.
   8. A sample message looks like -
-  ```
+  
+  ```json
   {
     "message_id": "121212121212",
-    "msg_type" "MSG_TEXT",
+    "msg_type": "MSG_TEXT",
     "content" : "HI there",
     "receipent" : "User B",
     "Sender" : "User A",
   }
   ```
   
-#### Media Service
+ #### Media Service
   Hi I am the media service. I help in sending images, videos and other media files. My job is-
   1. Whenever user selects and sends an image in the client app, It is uploaded over a different Http connection to an Image optimized store (such as Facebooks HayStack) and an unique ID is given to this resource.
   2. A message is sent to to user with the Image resoruce ID.
