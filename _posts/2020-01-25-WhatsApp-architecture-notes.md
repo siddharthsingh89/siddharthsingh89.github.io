@@ -49,8 +49,8 @@ Hello, I am your favourite user Service. I live in WhatsApp\FB data center. I st
   5. What I store is something like-
   ```json
     { 
-      "id:"121212121212", 
-      "name: "Sidharth Singh",
+      "id" : "121212121212", 
+      "name" : "Sidharth Singh",
       "status" : "sleeping :-)", 
        "settings" : { 
                       "account_setting": {},
