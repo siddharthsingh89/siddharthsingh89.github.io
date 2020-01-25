@@ -16,7 +16,7 @@ I thought of studying the architecture and add some notes here.
 ### Important Components of the System
 
 #### WhatsApp Client Application
-![Client App](https://github.com/siddharthsingh89/siddharthsingh89.github.io/blob/master/images/whatsapp_client.png "Client App Diagram")
+![Client App](/images/whatsapp_client.png "Client App Diagram")
 
 Hi, I am the Client Application, developed for different platforms(iOS, android, Web, kaiOS etc).  My job is to -
   1. Start a connection to the WhatsApp server
@@ -32,7 +32,7 @@ Hi, I am the Client Application, developed for different platforms(iOS, android,
  
 #### Gateway Server
 
-![Gateway Server](https://github.com/siddharthsingh89/siddharthsingh89.github.io/blob/master/images/whatsapp_gateway.png "Gateway Diagram")
+![Gateway Server](/images/whatsapp_gateway.png "Gateway Diagram")
 
 Hi, I am the gateway server. I live in Whatsapp\FB data centers and handle connections. My job is-
   1. To maintain connections to the client App. When user A launches the Whatsapp Application, they open a TCP connection with me and than 
