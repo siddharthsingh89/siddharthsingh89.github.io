@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Notes on WhatsApp architecture design
+description : whatsapp, system design, distributed system, interview,  client, server, gateway
 ---
 
 
