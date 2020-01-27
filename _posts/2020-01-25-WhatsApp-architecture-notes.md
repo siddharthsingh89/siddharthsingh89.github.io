@@ -11,7 +11,28 @@ of the features of Whatsapp. At that time, I gave a Okayish generic answer havin
 
 I thought of studying the architecture and add some notes here.
 
+#### Some important things first
+1. This is just a sample design based on my experiences, Youtube videos, blogs and other sources on the web. 
+2. No answer is wrong or is absolutely correct. There are many designs possible.
+3. This is just to help with pointers to consider during your actual interview.
+4. This covers a very small subset of feartures in the system. There are hundred of things whicha are not present. Think of 
+Authentication, Logging, monitoring, Deployment,  Notification systems, CI/CD, Storage Layers, Replication, Backup, Disaster recovery, Compliance, GDPR, Privacy to name a few.
 
+
+#### Scale of Whatsapp
+Official Whatsapp Stats in mid-2017 are below- [Source](https://blog.whatsapp.com/10000631/Connecting-One-Billion-Users-Every-Day)
+1. 1 Billion Daily Active Users
+2. 1.3 Billion Monthly Active Users
+3. 55 Billion Messages sent per day (what!)
+4. 4.5 Billion photos shared per day (omg)
+5. 1 Billion videos shared per day (what?!!)
+6. 60 Languages Supporated
+7. More than a million people register daily.
+8. More than 2 billion minutes of voice and video calls are made on WhatsApp daily.
+9. There are 3 million companies using WhatsApp Business.
+
+This is nearly two years old stats, must have been doubled by now.
+Whatsapp is lucky that they don't have to store these messages, videos and images forever like other messenger apps. Even if the storage is cheap these days, this scale is a monster.
 
 
 ### Important Components of the System
@@ -52,6 +73,7 @@ Hello, I am your favourite user Service. I live in WhatsApp\FB data center. I st
   3. I can use relational database but it's best for me to use Read-optimized hight available key-value store for storing user information.
   4. Let's say I use Amazon Dynamo for storing it. I also interact with a Redis Cache before hitting the database.
   5. What I store is something like-
+  
   ```json
     { 
       "id" : "121212121212", 
@@ -108,11 +130,6 @@ Hello, I am your favourite user Service. I live in WhatsApp\FB data center. I st
   Hope this helps. I will add some diagrams(MOST IMPORTANT).
   To be continued-
   
-#### Other areas 
- 1. How to make this architecture resilient?
- 2. Adding some stats about actual WhatsApp traffic.
- 3. Add Capacity estimation.
 
-  
 #### References
-1. Whatsapp 
+To be added
