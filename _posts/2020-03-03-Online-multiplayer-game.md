@@ -10,7 +10,7 @@ An Online multiplayer game can be of many types. Turn based such as Chess, Poker
 
 #### Most Important Component of the System
 
-1. Game Client App
+#### Game Client App
 ![Game Client](/images/gameClients.png "Game Clients")
 
    * User interface of the Game. Can be a Web or mobile or Console App.
@@ -18,11 +18,11 @@ An Online multiplayer game can be of many types. Turn based such as Chess, Poker
    * Communicates with the Server over Websockets\raw TCP\UDP\Custom Protocol.
    
 
-2. Game Server
+#### Game Server
    * Core Gaming Logic is here. Game objects, their interaction etc.
    * Cluster of servers receiving request from Load balancer.
    
-3. MatchMaker System
+#### MatchMaker System
   * Important component of Massive multiplayer games.
   * Matchmaker will take in a certain amount of people, pair them together and send them on their way to the game server.
    One strategy is to - get a random group of people together to play the game,this will not give balanced game play     
@@ -35,7 +35,7 @@ An Online multiplayer game can be of many types. Turn based such as Chess, Poker
   * Groups user based on their characterstics, locality, latency and create an ideal group of users to play.
   * Can be implemented using Queues.
   
-4. Database
+#### Database
   * We need to store lots of data. Examples are Player, Sessions, GameHistory etc.
   * Can be relational or noSql as well. Many highly scalabled games are successfully relational.
   * Performance is very important for games, which are extremely read and write-heavy. 
@@ -43,43 +43,48 @@ An Online multiplayer game can be of many types. Turn based such as Chess, Poker
      currency, changes inventory, unlocks upgrades, and completes achievements.
   * Each event must be written to your database layer so it isn’t lost. Durability is important.
   
-5. LeaderBoard System
+#### LeaderBoard System
   * A high performance Leaderboard system which can calcuate rank of user in real time.
   * Anti-Cheating system to detect fake scores.
   * Can be implemented using Redis Sorted Sets commands in logn complexity.
   * SelfBalancing BST are used to store leadership data.
   * Can be highly granular.
   
-6. Media Storage System
+#### Media Storage System
   * Games contain lot of media eg, Images, videos, cached renditions, other compressed graphic assets, maps etc.
   * Need a storge layer to store media.
   
-7. CDN
+#### CDN
   * Great CDN deployment is must so that media is available near to the player.
   
-8. Fast Distributed Caching Layer
+#### Fast Distributed Caching Layer
   * Good caching layer is needed in leaderboard, gameplay etc.
   
-9. Load Balancer
+#### Load Balancer
   * Load balancer needed to balance nodes across fleet of Game Servers.
   
-10. Notification System
+#### Notification System
   * Notify players of new Game tournaments, scores, stats etc.
   
-11. Instrumentation System
+#### Instrumentation System
   * Intrument Game play data to detect scale needed.
   * Detect fake scores.
   
-12. Authentication Service
+#### Authentication Service
   * Authenticate players before starting the game.
   
-13. Chatting Service
+#### Chatting Service
   * Should support chatting between players during the game.
   * Optional chat translation.
   
-  #### Details
+ 
   
   
   #### References
   
+  These are just notes and I will try to add more informtion to the some of the commonly asked components such as Leaderboard   in detail. Below are some important references for game and infra examples-
   
+  1. [Google Cloud Gaming Infrastructure](https://cloud.google.com/solutions/gaming/cloud-game-infrastructure)
+  2. [Azure Gaming](https://docs.microsoft.com/en-us/gaming/azure/)
+  3. [AWS Gaming](https://aws.amazon.com/gaming/game-server/)
+  4. [Leaderboard](https://cloud.google.com/solutions/using-memorystore-for-redis-as-a-leaderboard)
