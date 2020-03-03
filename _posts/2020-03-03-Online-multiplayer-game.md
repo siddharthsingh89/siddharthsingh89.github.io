@@ -6,17 +6,17 @@ description : game, online, multiplayer, system design, distributed system, inte
 
 
 ### Designing an Online multiplayer gaming system
+An Online multiplayer game can be of many types. Turn based such as Chess, Poker or first Person shooters such as PUBG or world of warcraft, DOTA etc.
 
-#### What is a Massive Multiplayer Online Game
-
-#### Multiplayer Game types and Examples
-
-#### Most Important Component of the System
+ #### Most Important Component of the System
 
 1. Game Client App
+![Game Client](/images/gameClients.png "Game Clients")
+
    * User interface of the Game. Can be a Web or mobile or Console App.
    * Lots of game media, past history is cached in the client App.
    * Communicates with the Server over Websockets\raw TCP\UDP\Custom Protocol.
+   
 
 2. Game Server
    * Core Gaming Logic is here. Game objects, their interaction etc.
