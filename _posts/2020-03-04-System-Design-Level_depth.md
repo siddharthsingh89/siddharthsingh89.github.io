@@ -1,6 +1,6 @@
 ---
 layout: post
-title: System design-Deth required is proportional to your Expected Level
+title: System design-Depth and SDE Levels
 description : sde, system design, depth, system, interview
 ---
 
