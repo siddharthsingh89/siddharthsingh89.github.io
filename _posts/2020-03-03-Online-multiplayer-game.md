@@ -8,7 +8,7 @@ description : game, online, multiplayer, system design, distributed system, inte
 ### Designing an Online multiplayer gaming system
 An Online multiplayer game can be of many types. Turn based such as Chess, Poker or first Person shooters such as PUBG or world of warcraft, DOTA etc.
 
- #### Most Important Component of the System
+#### Most Important Component of the System
 
 1. Game Client App
 ![Game Client](/images/gameClients.png "Game Clients")
@@ -24,13 +24,24 @@ An Online multiplayer game can be of many types. Turn based such as Chess, Poker
    
 3. MatchMaker System
   * Important component of Massive multiplayer games.
+  * Matchmaker will take in a certain amount of people, pair them together and send them on their way to the game server.
+   One strategy is to - get a random group of people together to play the game,this will not give balanced game play     
+   experience.
+   
+   Main Requirement-
+    * Not too easy not too hard for a gamer. 
+    * No waiting for long time to get a match.
+    
   * Groups user based on their characterstics, locality, latency and create an ideal group of users to play.
   * Can be implemented using Queues.
   
 4. Database
   * We need to store lots of data. Examples are Player, Sessions, GameHistory etc.
   * Can be relational or noSql as well. Many highly scalabled games are successfully relational.
-  * High read and write throughput is needed.
+  * Performance is very important for games, which are extremely read and write-heavy. 
+  * Game data is continuously updated and read as the player progresses through levels, defeats enemies, receives in-game  
+     currency, changes inventory, unlocks upgrades, and completes achievements.
+  * Each event must be written to your database layer so it isn’t lost. Durability is important.
   
 5. LeaderBoard System
   * A high performance Leaderboard system which can calcuate rank of user in real time.
