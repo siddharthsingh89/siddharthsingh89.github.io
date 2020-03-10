@@ -1,15 +1,12 @@
 ---
 layout: post
-title: System design-Depth and SDE Levels
+title: System Design-Depth and SDE Levels
 description : sde, system design, depth, system, interview
 ---
 
 
-### Depth in your design
-
-For system design interviews, expectation is different from different levels of SDE. For example, in many companies, there is no system design round for new grads
-or people with less than two years of experience. Google is alos one of those companies. For 2,3 year experienced, You are asked to 
-choose between a System design round and another DS\Algo round.
+### Having depth in your design
+For system design interviews, expectation is different from different levels of SDE. For example, in many companies, there is no system design round for new grads or people with less than two years of experience. Google is alos one of those companies. For 2,3 year experienced, You are asked to choose between a System design round and another DS\Algo round.
 
 However, starting from mid-SDE Level(61\62 at Microsoft, SDE2, L5 at Google or E4\E5 at FB), system design interviews are a must.
 Your knowledge about distributed system is assessed by interviewers. Since, there is no absolutely correct one way to design a system
