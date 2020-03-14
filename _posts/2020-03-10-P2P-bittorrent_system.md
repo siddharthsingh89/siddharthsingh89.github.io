@@ -78,16 +78,18 @@ After the search is exhausted, the client then inserts the peer contact informat
 ##### Downloading Strategies
 
 The BitTorrent protocol selects pieces to download by using the following four simple policies:
-• Policy #1: Strict Policy: Until a piece is assembled, only download sub-pieces for that piece.
-• Policy #2: Rarest First: Determine the pieces that are most rare among your peers and download those first.
-• Policy #3: Random First Piece: Select a random piece of the file and download it.
-• Policy #4: Endgame mode: When all the sub-pieces that a peer doesn’t have are actively being requested, these are requested from every peer.
+1. Strict Policy: Until a piece is assembled, only download sub-pieces for that piece.
+2. Rarest First: Determine the pieces that are most rare among your peers and download those first.
+3. Random First Piece: Select a random piece of the file and download it.
+4. Endgame mode: When all the sub-pieces that a peer doesn’t have are actively being requested, these are requested from every peer.
 These policies ensure that the pieces are replicated, and that every peer has the largest probability of retrieving the complete file, as quickly as possible.
 
 
 #### Searching a File over the network
+
 DHT-based systems lack the support of a user friendly content-based search and can only do exact match search by default because of the use of hash functions. Another Content-based search system needs to be developed over the Distributed hash tables to allows the lookup of files without knowing an exact keyword. Prefix Hash Trees are a good data structure for this.
-Content Similarity Searches
+Also Content Similarity Searches based systems can be used.
 
 #### References
+
 1. Bittorrent.org
