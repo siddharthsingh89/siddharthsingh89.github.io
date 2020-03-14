@@ -52,6 +52,9 @@ Third generation peer-to-peer networks use Distributed hash tables to look up fi
 #### Upload a file as a content provider
 ![Uploading a file](/images/partitionfile.png "Partition File")
 
+1. When creating the torrent file from the original file, the original file is cut into smaller pieces, usually 512 KB or 256Kb in size. 
+
+2. The SHA-1 hash codes of the pieces are included in the torrent file. The downloaded data are verified by computing the SHA-1 hash code and comparing it to the SHA-1 code of the corresponding piece in the torrent file. This way the data is checked for errors and it guarantees to the users that they are downloading the real thing. 
 
 #### Downloading a file
     Search and find the Peer nodes
