@@ -56,17 +56,38 @@ Third generation peer-to-peer networks use Distributed hash tables to look up fi
 
 2. The SHA-1 hash codes of the pieces are included in the torrent file. The downloaded data are verified by computing the SHA-1 hash code and comparing it to the SHA-1 code of the corresponding piece in the torrent file. This way the data is checked for errors and it guarantees to the users that they are downloading the real thing. 
 
-#### Downloading a file
-    Search and find the Peer nodes
-    Establish connection and Download
-    Strategies for Download
+#### Finding the Peer nodes having the torrent and Downloading
 
-#### Security
-    Hash Verification
-    Encryption
+##### Distributed Hash Table
+From Wikipedia, "A distributed hash table (DHT) is a distributed system that provides a lookup service similar to a hash table: (key, value) pairs are stored in a DHT, and any participating node can efficiently retrieve the value associated with a given key. 
+
+The main advantage of a DHT is that nodes can be added/removed with minimum work around re-distributing keys. Keys are unique identifiers which map to particular values, which in turn can be anything from addresses, to documents, to arbitrary data. 
+
+Responsibility for maintaining the mapping from keys to values is distributed among the nodes, in such a way that a change in the set of participants causes a minimal amount of disruption. This allows a DHT to scale to extremely large numbers of nodes and to handle continual node arrivals, departures, and failures.
     
-#### Searching a File 
-    Prefix Hash Trees
-    Content Similarity Searches
+When a node wants to find peers for a torrent, it uses the distance metric to compare the infohash of the torrent with the IDs of the nodes in its own routing table.
+
+It then contacts the nodes it knows about with IDs closest to the infohash and asks them for the contact information of peers currently downloading the torrent. If a contacted node knows about peers for the torrent, the peer contact information is returned with the response. 
+
+Otherwise, the contacted node must respond with the contact information of the nodes in its routing table that are closest to the infohash of the torrent. The original node iteratively queries nodes that are closer to the target infohash until it cannot find any closer nodes.
+
+After the search is exhausted, the client then inserts the peer contact information for itself onto the responding nodes with IDs closest to the infohash of the torrent.
+
+![Searching and download](/images/dhtsearch.png "DHT Search")
+
+##### Downloading Strategies
+
+The BitTorrent protocol selects pieces to download by using the following four simple policies:
+• Policy #1: Strict Policy: Until a piece is assembled, only download sub-pieces for that piece.
+• Policy #2: Rarest First: Determine the pieces that are most rare among your peers and download those first.
+• Policy #3: Random First Piece: Select a random piece of the file and download it.
+• Policy #4: Endgame mode: When all the sub-pieces that a peer doesn’t have are actively being requested, these are requested from every peer.
+These policies ensure that the pieces are replicated, and that every peer has the largest probability of retrieving the complete file, as quickly as possible.
+
+
+#### Searching a File over the network
+DHT-based systems lack the support of a user friendly content-based search and can only do exact match search by default because of the use of hash functions. Another Content-based search system needs to be developed over the Distributed hash tables to allows the lookup of files without knowing an exact keyword. Prefix Hash Trees are a good data structure for this.
+Content Similarity Searches
 
 #### References
+1. Bittorrent.org
