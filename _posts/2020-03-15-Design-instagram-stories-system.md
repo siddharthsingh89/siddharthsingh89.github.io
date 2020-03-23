@@ -74,7 +74,7 @@ Stories will be added to the cache for faster access and evicted by the backgrou
  
 
 #### High Level Design 
-
+![Stories Backend Design](/images/stories.png "Instagram stories")
 #### API 
 
 #### Database design
