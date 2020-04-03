@@ -3,15 +3,11 @@ layout: post
 title: Design Google translation service
 description : translation service , system design, interview
 ---
+##### What is Cloud translation service?
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+##### Requirements and Goals of System
 
-#### Cloud Translation service
-
+##### High Level design
 
 #### References
 
