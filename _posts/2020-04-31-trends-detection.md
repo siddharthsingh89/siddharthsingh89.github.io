@@ -5,8 +5,7 @@ description : instagram, twitter, trends, system design,
 ---
 
 #### What is a Trend?
-
-The Wikipedia defination of a trend is-
+Displaying Trends is very important features of modern social networks such as Twitter\FB\Instagram and lets uesr discover what's happening in the world. The Wikipedia defination of a trend is-
 
 > A word, phrase, or topic that is mentioned at a greater rate than others is said to be a "trending topic". Trending topics become popular either through a concerted effort by users or because of an event that prompts people to talk about a specific topic. These topics help Twitter\Instagrm and their users to understand what is happening in the world and what people's opinions are about it.
 
