@@ -23,10 +23,36 @@ The trend should be about something new. People were not posting about it before
 The trend should surface on the social network while the real event is taking place and not after it happens. The data processing systems should process the tweets and pick the trends in near-realtime.
 
 #### How to identify a trend from a stream of tweets?
+###### Step 1 : Event Stream Generation
 
-#### Components
+If a tweet or post is created by the user, an event with tweet\post data and metadata is generated and sent to a Kafka topic. This topic is consumed by the Parser component.
 
-#### High Level Design
+Lets say, a user posted below tweet.
+			```India won the match, Wow #IndiaVsAustralia #Dhoni ```
+An event will be generated and sent asynchronously to a Kafka topic with this tweet data and metadata. 
+      
+###### Step 2 :  Parsing
+To detect the trends,the first step to parse tweets, collect and store data about the hashtags. We need a Parser and a data store, which processes the incoming stream of tweets and parse and filter the hashtags and stores the frequencies in the database for last seven days for every five minute intervals.
+For example, 
+[![Parsed Tweet Frequency Data](/images/parsed.png "Parsed Tweet Frequency Data")
+
+
+###### Step 3 :  Scoring
+
+
+###### Step 4 :  Ranking
+
+
+###### Step 5 :  Group and Store
+
+
+###### Step 6 :  Serve
+
+
+
+#### High Level Architecture Digram
+
+
 
 #### References
 1. [Trending on Instagram](https://instagram-engineering.com/trending-on-instagram-b749450e6d93#8ddd "trending")
