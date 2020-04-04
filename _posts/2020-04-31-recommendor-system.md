@@ -2,8 +2,8 @@
 layout: post
 title: Design Recommender System
 description : recommender system, ML, system design, AI
---->
-<!-- header to keep some metadata for the post -->
+---
+
 <table>
     <tbody>
         <tr>
