@@ -30,6 +30,26 @@ Recommendar systems are algorithms which predict the user behaviour and suggest 
 3. Youtube videos suggestions.
 4. Spotify music suggestions such as Discover Weekly playlists etc.
 
+
+<table>
+    <tbody>
+        <tr>
+            <th>Status</th>
+            <th>Difficulty</th>
+            <th>Solution Depth</th>
+            <th>Core Algorithm</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>In Progress </td>
+            <td><a href="http://siddharthsingh89.github.io/quantify-system-design">Medium</a></td>
+            <td><a href="http://siddharthsingh89.github.io/quantify-system-design">Low</a></td>
+            <td>Collaborative filtering </td>
+            <td>Netflix, Amazon Prime, Youtube</a></td>
+        </tr>
+    </tbody>
+</table>
+
 ##### References
 
 
