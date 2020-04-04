@@ -50,6 +50,10 @@ Recommendar systems are algorithms which predict the user behaviour and suggest 
     </tbody>
 </table>
 
+|Status|Difficulty|Solution Depth|Core Algorithm|Example|
+|--- |--- |--- |--- |--- |
+|In Progress|Medium|Low|Collaborative filtering|Netflix, Amazon Prime, Youtube|
+
 ##### References
 
 
