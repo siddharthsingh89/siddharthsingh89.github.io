@@ -11,6 +11,7 @@ description : compiler, design, system dev
 * **Source language** is generally high level languages like C, C++, Java etc. It is designed and optimized for humans (the syntax is similar to our notion of languages such as english) and is readable and maintenable. It is easier to write, review and in general platform independent.
 * **The target language**  is generally machine language or an intermediate language. It is generlly binary(0s and 1s) and the not 
 for human to read or write. it is highly optimized to be understood  and executed by the processor.
+![Compiler](/images/compiler.png "Compiler")
 
 
 ##### Goals of the Compiler
@@ -39,5 +40,23 @@ The compile process comprises of many steps which can be abstracted under two ma
 . Representations become more machine specific and less language specific as the translation proceeds.
 
 
+##### Structure of a Compiler
+A Compiler is composed of various components working on the source code in a sequence of phases. Below is a diagram showing the components and various phases of a compilation process-
 
+![Stages of Compiler](/images/stages_compiler.png "Stages of Compiler")
+
+ ###### Lexical Analyzer
+ 
+ 
+ ###### Syntax Analyzer
+ 
+ 
+ ###### Semantic Analyzer
+ 
+ 
+ ###### Intermediate Code Generator
+ 
+ 
+ ###### Code Generator
+ 
  
