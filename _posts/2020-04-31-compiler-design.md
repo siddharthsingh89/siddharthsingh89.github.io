@@ -4,9 +4,7 @@ title: Design a Compiler
 description : compiler, design, system dev
 ---
 
-#### Design a Compiler
-
-##### What is a compiler ?
+#### What is a Compiler?
 * A Compiler is a software program which translates a program written in a **source language** to equivalent program in the  **target language**.
 * **Source language** is generally high level languages like C, C++, Java etc. It is designed and optimized for humans (the syntax is similar to our notion of languages such as english) and is readable and maintenable. It is easier to write, review and in general platform independent.
 * **The target language**  is generally machine language or an intermediate language. It is generlly binary(0s and 1s) and the not 
