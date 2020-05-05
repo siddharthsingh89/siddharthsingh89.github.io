@@ -4,8 +4,9 @@ title: Technologies behind Video Streaming
 description : videostreaming, dash, system design, prime, interview
 ---
 
-#### How system like Amazon Prime serves its content?
-There are many technologies involved.
+#### How Video Streaming platforms work?
+Have you ever wondered how platforms like Amazon Prime, Netflix or Hotstar seamlessly play videos on a variety of devices without interruption even if the internet speed fluctuates ? How they play a video on a 4K HDTV and a 6" mobile screen with great viewing experience. The technology behind these platforms is amazing and complex and lot of compute and storage is put to provide that user experience. In this post, I will try to provide some idea about the Processing pipeline of a video on these platforms and various other technologies, tools and protocols involved.
+
 
 #### Streaming
 
@@ -16,8 +17,8 @@ MPEG-DASH works by breaking the content into a sequence of small HTTP-based file
 
 DASH is an adaptive bitrate streaming technology where a multimedia file is partitioned into one or more segments and delivered to a client using HTTP.  A media presentation description (MPD) describes segment information (timing, URL, media characteristics like video resolution and bit rates), and can be organized in different ways such as SegmentList, SegmentTemplate, SegmentBase and SegmentTimeline, depending on the use case. Segments can contain any media data, however the specification provides specific guidance and formats for use with two types of containers: ISO base media file format (e.g. MP4 file format) or MPEG-2 Transport Stream.
 
-Adaptive bitrate streaming is a technique used in streaming multimedia over computer networks. Today's adaptive streaming technologies are almost exclusively based on HTTP[1] and designed to work efficiently over large distributed HTTP networks such as the Internet.
-It works by detecting a user's bandwidth and CPU capacity in real time and adjusting the quality of the media stream accordingly. [2] It requires the use of an encoder which can encode a single source media (video or audio) at multiple bit rates. The player client[3]switches between streaming the different encodings depending on available resources.[4] "The result: very little buffering, fast start time and a good experience for both high-end and low-end connections."[5]
+Adaptive bitrate streaming is a technique used in streaming multimedia over computer networks. Today's adaptive streaming technologies are almost exclusively based on HTTP and designed to work efficiently over large distributed HTTP networks such as the Internet.
+It works by detecting a user's bandwidth and CPU capacity in real time and adjusting the quality of the media stream accordingly.  It requires the use of an encoder which can encode a single source media (video or audio) at multiple bit rates. The player client switches between streaming the different encodings depending on available resources. The result is very little buffering, fast start time and a good experience for both high-end and low-end connections."
 
 
 #### Security
@@ -31,16 +32,13 @@ A trusted boot process, to ensure that the OS has not been tampered with, and th
 Trusted OS
 Secure apps
 The usual use cases for the Trusted Execution Environment are the protection of authentication mechanisms - cryptography, content decryption keys, and Digital Rights Management licenses.
+
 What this boils down to, for Netflix’s streaming on Android, is that Google, as part of Android OS, installs the Widevine Content Decryption Module in the TrustZone (trusted hardware layer). All video decryption, decoding and rendering occur in the Trusted environment. The video is rendered directly to the screen from this Trusted Execution Environment. This TEE-to-screen process ensures that at no point does any non-trusted app get access to either the premium content or to the content keys themselves.
 
 #### Video Encoding
 
-AWS Elemental MediaConvert is a file-based video processing service that provides scalable video processing for content owners and distributors with media libraries of any size. MediaConvert offers advanced features that enable premium content experiences, including:
-professional broadcast codecs that support increased bit depth and HDR content creation
-still graphic overlays
-advanced audio
-digital rights management (DRM)
-closed captioning support
+AWS Elemental MediaConvert is a file-based video processing service that provides scalable video processing for content owners and distributors with media libraries of any size. MediaConvert offers advanced features that enable premium content experiences, including: professional broadcast codecs that support increased bit depth and HDR content creation, still graphic overlays, advanced audio, digital rights management (DRM), closed captioning support.
+
 AWS Elemental MediaConvert offers support for various input formats and adaptive bitrate (ABR) packaging output formats for delivering high-quality content from a range of sources onto primary and multiscreen devices.
 
 #### Ad Insertion
@@ -65,4 +63,4 @@ As playback progresses, either MediaTailor or the video player reports how much 
 
 #### CDN
 
-Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment. CloudFront is integrated with AWS – both physical locations that are directly connected to the AWS global infrastructure, as well as other AWS services. CloudFront works seamlessly with services including AWS Shield for DDoS mitigation, Amazon S3, Elastic Load Balancing or Amazon EC2 as origins for your applications, and Lambda@Edge to run custom code closer to customers’ users and to customize the user experience.  You can get started with the Content Delivery Network in minutes, using the same AWS tools that you're already familiar with: APIs, AWS Management Console, AWS CloudFormation, CLIs, and SDKs. Amazon's CDN offers a simple, pay-as-you-go pricing model with no upfront fees or required long-term contracts, and support for the CDN is included in your existing AWS Support subscription.
+Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment. CloudFront is integrated with AWS – both physical locations that are directly connected to the AWS global infrastructure, as well as other AWS services. CloudFront works seamlessly with services including AWS Shield for DDoS mitigation, Amazon S3, Elastic Load Balancing or Amazon EC2 as origins for your applications, and Lambda@Edge to run custom code closer to customers’ users and to customize the user experience. You can get started with the Content Delivery Network in minutes, using the same AWS tools that you're already familiar with: APIs, AWS Management Console, AWS CloudFormation, CLIs, and SDKs. Amazon's CDN offers a simple, pay-as-you-go pricing model with no upfront fees or required long-term contracts, and support for the CDN is included in your existing AWS Support subscription.
